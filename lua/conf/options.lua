@@ -1,39 +1,24 @@
 local options = {
-  autoread = true,
-	backup = false,
 	clipboard = "unnamedplus",
-	cmdheight = 0,
+	cmdheight = 1,
 	completeopt = { "menuone", "noselect" },
-	conceallevel = 0,
-	fileencoding = "utf-8",
-	hlsearch = true,
-	incsearch = true,
 	ignorecase = true,
-	ro = false,
-	mouse = "a",
 	pumheight = 10,
 	showmode = false,
 	showtabline = 2,
 	smartcase = true,
 	splitbelow = true,
 	splitright = true,
-	swapfile = false,
-	termguicolors = true,
-	timeoutlen = 1000,
 	undofile = true,
 	updatetime = 300,
-	writebackup = false,
 	expandtab = true,
 	shiftwidth = 4,
 	tabstop = 4,
-	cursorline = false,
 	number = true,
-	numberwidth = 4,
 	signcolumn = "yes",
 	wrap = false,
 	scrolloff = 4,
 	sidescrolloff = 4,
-  guifont = "Google Sans Code"
 }
 
 for k, v in pairs(options) do
@@ -57,8 +42,6 @@ vim.cmd("autocmd BufEnter * set formatoptions-=cro")
 -- c - auto wrap comments using the current textwidth
 -- r - auto continue a comment when you press Enter in Insert mode
 -- o - auto insert the comment leader when using o or O to open a new line
-
-vim.opt.shortmess:append "c"
 
 -- if on Windows, use powershell 7
 if vim.fn.has("win32") == 1 then
