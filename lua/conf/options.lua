@@ -33,6 +33,7 @@ local options = {
 	wrap = false,
 	scrolloff = 4,
 	sidescrolloff = 4,
+  guifont = "Google Sans Code"
 }
 
 for k, v in pairs(options) do
@@ -51,37 +52,12 @@ vim.api.nvim_create_autocmd("FileType", {
 	group = "FileTypeSpecific",
 })
 
-vim.cmd("autocmd BufEnter * set formatoptions-=cro")
 vim.cmd("autocmd BufEnter * setlocal formatoptions-=cro")
-
--- reload buffers automatically
-vim.api.nvim_create_augroup("AutoReadFile", { clear = true })
-
-vim.api.nvim_create_autocmd(
-	{ "FocusGained", "BufEnter", "CursorHold", "CursorHoldI", "TermClose", "TermLeave" },
-	{
-		group = "AutoReadFile",
-		pattern = "*",
-		callback = function()
-			if vim.fn.mode() ~= "c" and vim.fn.getcmdwintype() == "" then
-				vim.cmd("checktime")
-			end
-		end,
-	}
-)
-
--- notify when a buffer was reloaded from disk
-vim.api.nvim_create_autocmd("FileChangedShellPost", {
-	group = "AutoReadFile",
-	pattern = "*",
-	callback = function()
-		vim.notify("File changed on disk - buffer reloaded", vim.log.levels.WARN)
-	end,
-})
+-- c - auto wrap comments using the current textwidth
+-- r - auto continue a comment when you press Enter in Insert mode
+-- o - auto insert the comment leader when using o or O to open a new line
 
 vim.opt.shortmess:append "c"
-
-vim.opt.guifont = "FiraCode Nerd Font"
 
 if vim.fn.has("win32") == 1 then
 	vim.opt.shell = "powershell.exe"
@@ -89,3 +65,9 @@ if vim.fn.has("win32") == 1 then
 	vim.opt.shellquote = ""
 	vim.opt.shellxquote = ""
 end
+
+-- transparent bg
+vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
+vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "none" })
