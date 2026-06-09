@@ -9,10 +9,10 @@ local builtin = require("telescope.builtin")
 
 -- file finding
 map("n", "<leader>ff", builtin.find_files, { desc = "Find files" })
-map("n", "<leader>fh", ":Telescope find_files hidden=true <CR>", { desc = "Find hidden files" })
+map("n", "<leader>fh", function() builtin.find_files({ hidden = true }) end, { desc = "Find hidden files" })
 map("n", "<leader>fr", builtin.oldfiles, { desc = "Recent files" })
 
--- search
+-- search (require ripgrep on PATH)
 map("n", "<leader>sg", builtin.live_grep, { desc = "Search by grep" })
 map("n", "<leader>sw", builtin.grep_string, { desc = "Search current word" })
 map("n", "<leader>sd", builtin.diagnostics, { desc = "Search diagnostics" })
@@ -34,4 +34,3 @@ map("n", "<leader>lr", builtin.lsp_references, { desc = "LSP references" })
 
 -- help
 map("n", "<leader>hh", builtin.help_tags, { desc = "Help tags" })
-map("n", "<leader>hm", builtin.man_pages, { desc = "Man pages" })

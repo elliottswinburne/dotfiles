@@ -25,6 +25,21 @@ for k, v in pairs(options) do
 	vim.opt[k] = v
 end
 
+-- open nvim with most recent file, this might break piping into nvim
+vim.api.nvim_create_autocmd("VimEnter", {
+  callback = function()
+    if vim.fn.argc() > 0 then
+      return
+    end
+    for _, file in ipairs(vim.v.oldfiles) do
+      if vim.fn.filereadable(file) == 1 then
+        vim.cmd.edit(file)
+        return
+      end
+    end
+  end,
+})
+
 -- create autocommand group for file-specific settings
 vim.api.nvim_create_augroup("FileTypeSpecific", { clear = true })
 
@@ -50,5 +65,3 @@ if vim.fn.has("win32") == 1 then
 	vim.opt.shellquote = ""
 	vim.opt.shellxquote = ""
 end
-
-vim.cmd.colorscheme("habamax")

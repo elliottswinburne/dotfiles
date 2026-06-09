@@ -1,6 +1,6 @@
 local ts = require("nvim-treesitter")
 
--- Prefer gcc: cargo's tree-sitter CLI drives clang in MSVC mode (needs VS); gcc just works.
+-- Prefer gcc
 if vim.fn.executable("gcc") == 1 then
   vim.env.CC = vim.env.CC or "gcc"
 elseif vim.fn.executable("clang") == 1 then

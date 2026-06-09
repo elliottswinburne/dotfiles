@@ -25,6 +25,8 @@ map("n", "<leader>q", "<cmd>bdelete<CR>", opts)
 map("n", "K", vim.lsp.buf.hover, opts)
 map("n", "[d", vim.diagnostic.goto_prev, opts)
 map("n", "]d", vim.diagnostic.goto_next, opts)
+map("n", "gd", vim.lsp.buf.definition, opts)
+map("n", "gD", vim.lsp.buf.declaration, opts)
 
 -- window resize arrow keys
 map("n", "<C-Up>", "<cmd>resize +1<CR>", opts)
