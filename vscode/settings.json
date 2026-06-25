@@ -5,8 +5,9 @@
     "editor.stickyScroll.enabled": false,
     "editor.cursorBlinking": "solid",
     "editor.inlineSuggest.enabled": false,
+    "editor.lineNumbers": "relative",
 
-    "workbench.colorTheme": "GitHub Dark",
+    "workbench.colorTheme": "Minimal",
     "workbench.list.smoothScrolling": false,
     "workbench.editor.empty.hint": "hidden",
     "workbench.settings.editor": "json",
