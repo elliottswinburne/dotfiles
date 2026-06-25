@@ -4,6 +4,7 @@
     "editor.minimap.enabled": false,
     "editor.stickyScroll.enabled": false,
     "editor.cursorBlinking": "solid",
+    "editor.inlineSuggest.enabled": false,
 
     "workbench.colorTheme": "GitHub Dark",
     "workbench.list.smoothScrolling": false,
