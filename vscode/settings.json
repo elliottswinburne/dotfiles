@@ -1,29 +1,24 @@
 {
-    // Editor
     "editor.fontFamily": "Google Sans Code",
     "editor.fontSize": 18,
     "editor.minimap.enabled": false,
     "editor.stickyScroll.enabled": false,
     "editor.cursorBlinking": "solid",
 
-    // Workbench
     "workbench.colorTheme": "GitHub Dark",
     "workbench.list.smoothScrolling": false,
     "workbench.editor.empty.hint": "hidden",
     "workbench.settings.editor": "json",
     "workbench.startupEditor": "none",
 
-    // Terminal
     "terminal.integrated.initialHint": false,
     "terminal.integrated.fontSize": 14,
 
-    // Vim extension
     "vim.leader": " ",
     "vim.useSystemClipboard": true,
     "vim.highlightedyank.enable": true,
     "vim.cursorStylePerMode.insert": "block",
 
-    // Vim normal-mode shortcuts.
     "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": ["<leader>", "w"],
@@ -71,7 +66,6 @@
         }
     ],
 
-    // Vim visual-mode editing shortcuts.
     "vim.visualModeKeyBindingsNonRecursive": [
         {
             "before": [">"],
