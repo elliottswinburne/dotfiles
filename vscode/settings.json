@@ -1,92 +1,77 @@
 {
+    // Editor
     "editor.fontFamily": "Google Sans Code",
-    "editor.fontSize": 14,
+    "editor.fontSize": 18,
+    "editor.minimap.enabled": false,
+    "editor.stickyScroll.enabled": false,
     "editor.cursorBlinking": "solid",
+
+    // Workbench
+    "workbench.colorTheme": "GitHub Dark",
+    "workbench.list.smoothScrolling": false,
     "workbench.editor.empty.hint": "hidden",
     "workbench.settings.editor": "json",
-    "workbench.list.smoothScrolling": true,
     "workbench.startupEditor": "none",
-    "editor.minimap.enabled": false,
-    
-    "C_Cpp.default.compilerPath": "c:\\msys64\\ucrt64\\bin\\gcc.exe",
-    "C_Cpp.default.cStandard": "c11",
-    "C_Cpp.default.intelliSenseMode": "gcc-x64",
-    "C_Cpp.clang_format_style": "file",
 
-    "security.workspace.trust.untrustedFiles": "open",
-    "github.copilot.chat.agent.currentEditorContext.enabled": false,
-    "update.showReleaseNotes": false,
-
-    "github.copilot.enable": {
-        "*": false,
-        "plaintext": false,
-        "markdown": false,
-        "scminput": false
-    },
-
-    "chat.agent.enabled": false,
-    "extensions.ignoreRecommendations": true,
-    "editor.stickyScroll.enabled": false,
+    // Terminal
     "terminal.integrated.initialHint": false,
-    "terminal.integrated.shellIntegration.enabled": false,
     "terminal.integrated.fontSize": 14,
 
+    // Vim extension
     "vim.leader": " ",
     "vim.useSystemClipboard": true,
     "vim.highlightedyank.enable": true,
-
     "vim.cursorStylePerMode.insert": "block",
-    "vim.cursorStylePerMode.normal": "block",
-    "vim.cursorStylePerMode.visual": "block",
-    "vim.cursorStylePerMode.replace": "block",
 
+    // Vim normal-mode shortcuts.
     "vim.normalModeKeyBindingsNonRecursive": [
-    {
-        "before": ["<leader>", "w"],
-        "commands": ["workbench.action.files.save"]
-    },
-    {
-        "before": ["<leader>", "q"],
-        "commands": ["workbench.action.closeActiveEditor"]
-    },
-    {
-        "before": ["<leader>", "e"],
-        "commands": ["workbench.action.toggleSidebarVisibility"]
-    },
-    {
-        "before": ["<leader>", "f"],
-        "commands": ["workbench.action.quickOpen"]
-    },
-    {
-        "before": ["H"],
-        "commands": ["workbench.action.previousEditor"]
-    },
-    {
-        "before": ["L"],
-        "commands": ["workbench.action.nextEditor"]
-    },
-    {
-        "before": ["K"],
-        "commands": ["editor.action.showHover"]
-    },
-    {
-        "before": ["[", "d"],
-        "commands": ["editor.action.marker.prevInFiles"]
-    },
-    {
-        "before": ["]", "d"],
-        "commands": ["editor.action.marker.nextInFiles"]
-    },
-    {
-        "before": ["g", "o"],
-        "commands": ["editor.action.peekTypeDefinition"]
-    },
-    {
-        "before": ["g", "D"],
-        "commands": ["editor.action.revealDefinitionAside"]
-    }
+        {
+            "before": ["<leader>", "w"],
+            "commands": ["workbench.action.files.save"]
+        },
+        {
+            "before": ["<leader>", "q"],
+            "commands": ["workbench.action.closeActiveEditor"]
+        },
+        {
+            "before": ["<leader>", "e"],
+            "commands": ["workbench.action.toggleSidebarVisibility"]
+        },
+        {
+            "before": ["<leader>", "f"],
+            "commands": ["workbench.action.quickOpen"]
+        },
+        {
+            "before": ["H"],
+            "commands": ["workbench.action.previousEditor"]
+        },
+        {
+            "before": ["L"],
+            "commands": ["workbench.action.nextEditor"]
+        },
+        {
+            "before": ["K"],
+            "commands": ["editor.action.showHover"]
+        },
+        {
+            "before": ["[", "d"],
+            "commands": ["editor.action.marker.prevInFiles"]
+        },
+        {
+            "before": ["]", "d"],
+            "commands": ["editor.action.marker.nextInFiles"]
+        },
+        {
+            "before": ["g", "o"],
+            "commands": ["editor.action.peekTypeDefinition"]
+        },
+        {
+            "before": ["g", "D"],
+            "commands": ["editor.action.revealDefinitionAside"]
+        }
     ],
 
+    // Vim visual-mode editing shortcuts.
     "vim.visualModeKeyBindingsNonRecursive": [
         {
             "before": [">"],
@@ -99,8 +84,6 @@
         {
             "before": ["g", "c"],
             "commands": ["editor.action.commentLine"]
-        },
-    ],
-    "workbench.colorTheme": "GitHub Dark",
-    "security.allowedUNCHosts": ["wsl.localhost"],
+        }
+    ]
 }
